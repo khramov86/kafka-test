@@ -29,6 +29,7 @@ jobs:
 
       - name: Package artifact
         run: |
+          sudo apt-get update && sudo apt-get install -y tar
           mkdir -p dist
           cp kafka-producer dist/
           tar -czvf kafka-producer-linux-amd64.tar.gz -C dist .
